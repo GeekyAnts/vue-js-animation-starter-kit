@@ -1,0 +1,138 @@
+.dashboard-wrapper {
+	padding: 15px;
+	border-radius: 19px;
+	.img {
+	border-radius: 50%;
+	height: 60px;
+	}
+  .first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ccc;
+  height: 150px;
+  .recent-proposal {
+   align-self: flex-end;
+   flex:1;
+   display: block;  
+  }
+  .info {
+   flex: 1;
+   align-self:flex-end;
+  .name {
+   color: #314860;
+   margin-top: 5px;
+  }
+ }
+ .events {
+  flex-direction: row;
+  display: flex;
+  align-self: flex-end;
+  flex: 1;
+  display: flex;
+  .events-data {
+   padding: 0px 20px;
+  }
+  .counts {
+   color: #333;
+  }
+ }
+}
+ .second-section {
+  max-height: 63vh;
+  .event-table {
+   width: 100%;
+   color: #314860;
+   background: whitesmoke;
+   padding: 15px;
+   text-align: left;
+   border-radius: 7px;
+   margin-top: 50px;
+   tbody {
+    tr {
+     td {
+      img {
+      width: 150px;
+      height: 85px;
+      border-radius: 5px;
+      }
+     &.table-body-cell {
+      border-bottom: 1px solid rgba(192, 153, 247, 0.2);
+      }
+      &.image-cell {
+      border-bottom: 1px solid rgba(192, 153, 247, 0.2);
+      }
+     }
+    }
+   }
+  .header-cell, .image-header {
+   // border-bottom: 2px solid #314860;
+   }
+  }
+ }
+}
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+
+@keyframes bounce-in {
+  100% {
+    transform: translateY(-142px);
+  }
+}
+.trial {
+	animation: bounce-in 1s ease-in-out 0s 1 normal forwards;
+}
+
+.fade-table-enter-active, .fade-table-leave-active {
+  transition: opacity ease-in-out 0.5s;
+}
+.fade-table-enter, .fade-table-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+@media only screen and (min-width: 577px) and (max-width: 954px){
+  .recent-proposal {
+    display: none !important;
+  }
+  .events {
+    display: none !important;
+  }
+  .event-table {
+    position: relative;
+    .event-header {
+    display: none;
+    }
+    .event-info-cell {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 576px){
+  .recent-proposal {
+    display: none !important;
+  }
+  .events {
+    display: none !important;
+  }
+  .event-table {
+    .event-header {
+    display: none;
+    }
+    .event-info-cell {
+      display: none;
+    }
+    .friend-list-header {
+      display: none;
+    }
+    .star {
+      display: none;
+    }
+    .calendar-header {
+      display: none;
+    }
+    .calendar-info-cell {
+      display: none;
+    }
+  }
+}

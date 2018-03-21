@@ -1,0 +1,372 @@
+.wrapper {
+    position: relative;
+    height: inherit;
+    display: flex;
+    .preload {
+        left: 0%;
+        top:  50%;
+        height: 180vh;
+        width: 120vw;
+        margin-left: -59vw;
+        margin-top: -60vh;
+        position: absolute;
+        background: url('../assets/logo.svg');
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        background-size: 100% 100%; 
+    }
+    .placeholder {
+		flex: 1;
+	}
+    .content {
+        flex: 1;
+        position: relative;
+        // height: 100%;
+        .form-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20vw;
+            height: 34vh;
+            margin-left: -10vw;
+            margin-top: -17vh;
+            .flip-img-wrapper {
+                position: relative;
+                height: 7vh;
+                width: 100%;
+                .user-icon {
+                    // height: 10vh;
+                    // width: 10vw;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -30px;
+                    top: 50%;
+                    margin-top: -30px;
+                    height: 60px;
+                    width: 60px;
+                }
+                .user-profile {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -30px;
+                }
+            }
+            .animate-form {
+                input[type=text], input[type=password] {
+                   width: 100%;
+                   // padding: 6px 26px 8px 16px;
+                    border-radius: 20px;
+                    border: 1px solid #ccc;
+                    margin-top: 15px;
+                    outline: none;
+                    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+                   // height: 4vh;
+                    // padding-left: 15px;
+                    // padding-right: 25px;
+                  //  width: 17vw;
+                    padding: 10px 26px 10px 14px;
+                   // height: 20px;
+                    box-sizing: border-box;
+                }
+                .textbox-wrapper {
+                    position: relative;
+                    span {
+                        position: absolute;
+                        top: 22px;
+                        right: 10px;
+                    }
+                }
+                .submit-btn {
+                   width: 100%;
+                   // width: 20.3vw;
+                    padding: 9px;
+                    border-radius: 16px;
+                    background: #314860;
+                    margin-top: 15px;
+                   // margin-bottom: 20px;
+                    outline: none;
+                    cursor: pointer;
+                    .login-text {
+                        color: #fff;
+                        letter-spacing: 5px;
+                        font-size: 15px;
+                    }
+                }
+                .text {
+                    // margin-top: 5px;
+                    color: #314860;
+                    font-size: 15px;
+                }
+                .footer-text {
+                    color: #314860;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &.activeClass {
+        .form-wrapper {
+            animation: formAnimation 2s 1 normal forwards;
+        }
+        .animate-form {
+           animation: hideForm 0.3s ease-in-out 0.5s 1 normal forwards;
+        }
+        .preload{
+            transform: translateX(-300vw);
+            transition: all ease-in-out 1s;
+        }
+    }
+}
+@keyframes formAnimation {
+    0% {
+        left: 50%;
+        top: 50%;
+        transition: all ease-in;
+        margin-top: -17vh;
+    }
+    50% {
+        left: 0%;
+        top: 50%;
+        transition: all ease-in;
+        margin-top: -17vh;
+    }
+    100% {
+        top: 0%;
+        left: 0%;
+        margin-top:17px;
+        transition: all ease-out;
+        animation-delay: 0.3s;
+    }
+}
+
+@keyframes hideForm {
+	100% {
+		opacity: 0;
+		transform: opacity ease-in-out 3s;
+	}
+}
+.fade-profile-pic-enter-active, .fade-profile-pic-leave-active {
+  transition: opacity 0.1s ease-in-out;
+}
+.fade-profile-pic-enter, .fade-profile-pic-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.trial-enter-active, .trial-leave-active {
+  transition: opacity 1s ease-in-out;
+}
+.trial-enter, .trial-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .preload {
+        height: 180vh !important;
+        width: 273vw !important;
+        margin-left: -137.5vw !important;
+        margin-top: -90vh !important;
+        left: 50% !important;
+        top: 50% !important;
+    }
+    .placeholder {
+       flex: 0 !important;
+    }
+    @keyframes formAnimation {
+        0% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        50% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        100% {
+            top: 0%;
+            left: 50%;
+            margin-top:17px;
+            transition: all ease-out; 
+            animation-delay: 0.3s;
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:760px){
+    .preload {
+        left: 50% !important;
+        top: 50% !important;
+        height: 120vh !important;
+        width: 289vw !important;
+        margin-left: -144.5vw !important;
+        margin-top: -60vh !important;
+    }
+    .placeholder {
+        flex: 0 !important;
+    }
+    @keyframes formAnimation {
+        0% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        50% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        100% {
+            top: 0%;
+            left: 50%;
+            margin-top:17px;
+            transition: all ease-out; 
+            animation-delay: 0.3s;
+        }
+    }
+  }
+  @media screen and (min-width:760px) and (max-width:938px){
+    .preload {
+        left: 50% !important;
+        top: 50% !important;
+        height: 100vh !important;
+        width: 304vw !important;
+        margin-left: -152.5vw !important;
+        margin-top: -50vh !important;
+    }
+    .placeholder {
+        flex: 0 !important;
+    }
+    @keyframes formAnimation {
+        0% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        50% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        100% {
+            top: 0%;
+            left: 50%;
+            margin-top:17px;
+            transition: all ease-out; 
+            animation-delay: 0.3s;
+        }
+    }
+  }
+  
+@media screen and (min-width:939px) and (max-width:970px) {
+    .preload {
+        left: 0% !important;
+        top: 20% !important;
+        height: 180vh !important;
+        width: 151vw !important;
+        margin-left: -53vw !important;
+        margin-top: -60vh !important;
+    }
+    .placeholder {
+        flex: 0 !important;
+    }
+    @keyframes formAnimation {
+        0% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        50% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        100% {
+            top: 0%;
+            left: 50%;
+            margin-top:17px;
+            transition: all ease-out; 
+            animation-delay: 0.3s;
+        }
+    }   
+  }
+  
+  @media screen and (min-width:971px) and (max-width:1036px){
+    .preload {
+        left: -12% !important;
+        top: 20% !important;
+        height: 180vh !important;
+        width: 151vw !important;
+        margin-left: -53vw !important;
+        margin-top: -60vh !important;
+      }
+      .placeholder {
+        flex: 0 !important;
+     }
+     @keyframes formAnimation {
+        0% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        50% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        100% {
+            top: 0%;
+            left: 50%;
+            margin-top:17px;
+            transition: all ease-out; 
+            animation-delay: 0.3s;
+        }
+    }
+  }
+  
+  @media screen and (min-width:1037px) and (max-width:1380px){
+    .preload {
+        left: 0% !important;
+        top: 32% !important;
+        height: 180vh !important;
+        width: 140vw !important;
+        margin-left: -59vw !important;
+        margin-top: -60vh !important;
+      }
+    .placeholder {
+    flex: 0 !important;
+    }
+    @keyframes formAnimation {
+        0% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        50% {
+            left: 50%;
+            top: 50%;
+            transition: all ease-in;
+            margin-top: -17vh;
+        }
+        100% {
+            top: 0%;
+            left: 50%;
+            margin-top:17px;
+            transition: all ease-out; 
+            animation-delay: 0.3s;
+        }
+    }
+  }

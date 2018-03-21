@@ -1,0 +1,137 @@
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 19px;
+	height: inherit;
+	.preload {
+		// margin-left: -106px;
+		flex: 1;
+		height: inherit;
+		// width: 658px;
+		background: url(../assets/vueLoginPage.png);
+		background-repeat: no-repeat;
+		box-sizing: border-box;
+		background-size:100% 100%;
+		// overflow: hidden;
+		// visibility: hidden;
+	}
+	.hideImg {
+		transform: translateX(-400px);
+	}
+	.content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: inherit;
+		.flip-img-wrapper {
+			position: relative;
+			.userProfile {
+				// height: 60px;
+				// width: 60px;
+				border-radius: 50%;
+				position: absolute;
+				top: -57px;
+				left: -31px;
+				height: 8.23vh;
+				width: 4.62vw;
+					}
+			.user-icon {
+				color: #314860;
+				// height: 60px;
+				// width: 60px;
+				position: absolute;
+				top: -57px;
+				left: -31px;
+				height: 8.23vh;
+				width: 4.62vw;
+			}
+		}
+		.animateForm {
+			position: relative;
+			.text-box {
+				width: 245px;
+				padding: 6px 26px 8px 16px;
+				border-radius: 20px;
+				border: 1px solid #ccc;
+				margin-top: 10px;
+				outline: none;
+				box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+				height: 20px;
+				+.user-o-icon {
+					position: absolute;
+					top: 18px;
+    			right: 20px;
+				}
+				+.lock-icon {
+					position: absolute;
+					top: 67px;
+    			right: 20px;
+				}
+			}
+			button {
+				width: 280px;
+				padding: 9px;
+				border-radius: 16px;
+				background: #314860;
+				margin-top: 10px;
+				margin-bottom: 20px;
+				outline: none;
+				cursor: pointer;
+				.login-text {
+					color: #fff;
+					letter-spacing: 5px;
+					font-size: 15px;
+				}
+			}
+			.text {
+				margin-top: 5px;
+				color: #314860;
+			}
+			.footer-text {
+				color: #314860;
+				font-weight: 500;
+			}
+    }
+	}
+	&.activeClass {
+    animation: formAnimation 0.5s ease-in-out 1 normal forwards;
+		.image-after-login {
+			animation: slide-up 0.3s ease-in-out 0.5s 1 normal forwards;
+		}
+		.animateForm {
+			animation: hideForm 0.3s ease-in-out 0.5s 1 normal forwards;
+		}
+  }
+}
+@keyframes formAnimation {
+    100% {
+			transform: translateX(calc(-25% + 1px));
+    }
+}
+@keyframes slide-up {
+	100% {
+		transform: translateY(-146px);
+	}
+}
+@keyframes hideForm {
+	100% {
+		opacity: 0;
+		transform: opacity ease-in-out 3s;
+	}
+}
+.fade-profile-pic-enter-active, .fade-profile-pic-leave-active {
+  transition: opacity 0.1s ease;
+}
+.fade-profile-pic-enter, .fade-profile-pic-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.trial-enter-active, .trial-leave-active {
+  transition: opacity 1s ease;
+}
+.trial-enter, .trial-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
