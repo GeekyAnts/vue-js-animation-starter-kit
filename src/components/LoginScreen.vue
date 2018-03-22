@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper" v-bind:class="[show ? 'activeClass' : '']" >
     <div class="preload">
-      <!-- <img src="../assets/BackgroundLogo.png" /> -->
     </div>
     <div class="placeholder">
     </div>
@@ -82,6 +81,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../style/login.scss"
 @import "../style/designLoginPage.scss";
 </style>
