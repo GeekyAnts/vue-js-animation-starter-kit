@@ -1,6 +1,8 @@
 # vue-animation
 
 > A Vue.js project
+## DEMO
+![picture](static/img/vue-animation.gif)
 
 ## Build Setup
 
