@@ -31,7 +31,7 @@ npm test
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+http://www.apache.org/licenses/LICENSE-2.0
 
 ## Medium
 https://blog.geekyants.com/vue-login-animation-8adbb88c4047
