@@ -21,7 +21,6 @@
     .content {
         flex: 1;
         position: relative;
-        // height: 100%;
         .form-wrapper {
             position: absolute;
             top: 50%;
@@ -57,18 +56,12 @@
             .animate-form {
                 input[type=text], input[type=password] {
                    width: 100%;
-                   // padding: 6px 26px 8px 16px;
                     border-radius: 20px;
                     border: 1px solid #ccc;
                     margin-top: 15px;
                     outline: none;
                     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-                   // height: 4vh;
-                    // padding-left: 15px;
-                    // padding-right: 25px;
-                  //  width: 17vw;
                     padding: 10px 26px 10px 14px;
-                   // height: 20px;
                     box-sizing: border-box;
                 }
                 .textbox-wrapper {
